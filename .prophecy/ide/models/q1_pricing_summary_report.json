@@ -1,0 +1,874 @@
+{
+  "id" : "q1_pricing_summary_report",
+  "metainfo" : {
+    "label" : "q1_pricing_summary_report",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "table",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "o4imDPGcQJ9j_6i8M_0VP$$gWySQTMkgTP4TRHml5zp7" : {
+      "id" : "o4imDPGcQJ9j_6i8M_0VP$$gWySQTMkgTP4TRHml5zp7",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "shipdate_before_1998_12_01",
+        "slug" : "shipdate_before_1998_12_01",
+        "x" : 220,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "O6hnqXF6OOXVddlppqtQF$$ZOWLR9W6xq-Qya_wUAllf##l_shipdate" ],
+        "condition" : {
+          "expression" : "/* this should be coming from a variable */\nl_shipdate <= DATE_SUB('1998-12-01', 90) "
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "O6hnqXF6OOXVddlppqtQF$$ZOWLR9W6xq-Qya_wUAllf",
+          "schema" : {
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "l_orderkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "l_partkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "l_suppkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "l_linenumber",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "l_quantity",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "l_extendedprice",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "l_discount",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "l_tax",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "l_returnflag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_linestatus",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_shipdate",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "l_commitdate",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "l_receiptdate",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "l_shipinstruct",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_shipmode",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_comment",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "lineitem"
+        } ],
+        "outputs" : [ {
+          "id" : "utEblcWGLsjHFVgc9hnxA$$1dv_Q5pKx95gW9-5P14Ww",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "l_orderkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "l_partkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "l_suppkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "l_linenumber",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "l_quantity",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "l_extendedprice",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "l_discount",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "l_tax",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "l_returnflag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_linestatus",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_shipdate",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "l_commitdate",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "l_receiptdate",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "l_shipinstruct",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_shipmode",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_comment",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "D9RXEzp1Po01O49XcJNMI" : {
+      "id" : "D9RXEzp1Po01O49XcJNMI",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "lineitem",
+        "slug" : "lineitem",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "lineitem",
+          "sourceType" : "Source",
+          "sourceName" : "samples.tpch",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "dQUQvfytpyuE9SpmV__UA",
+          "schema" : {
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "l_orderkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "l_partkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "l_suppkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "l_linenumber",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "l_quantity",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "l_extendedprice",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "l_discount",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "l_tax",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "l_returnflag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_linestatus",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_shipdate",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "l_commitdate",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "l_receiptdate",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "l_shipinstruct",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_shipmode",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_comment",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "q1_pricing_summary_report##XCTYc9xt" : {
+      "id" : "q1_pricing_summary_report##XCTYc9xt",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "q1_pricing_summary_report",
+        "x" : 820,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM order_by_returnflag_linestatus\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "UTMTrGtP",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "l_returnflag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_linestatus",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sum_qty",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "sum_base_price",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "sum_disc_price",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "sum_charge",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "avg_qty",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "avg_price",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "avg_disc",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "count_order",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            } ]
+          },
+          "slug" : "order_by_returnflag_linestatus"
+        } ],
+        "outputs" : [ {
+          "id" : "JjqhV79N",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "l_returnflag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_linestatus",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sum_qty",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "sum_base_price",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "sum_disc_price",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "sum_charge",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "avg_qty",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "avg_price",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "avg_disc",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "count_order",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "BpG3Prlk2U8FyWPSUUAxg$$-qCO9GfVAL8OJSSQf-h1I" : {
+      "id" : "BpG3Prlk2U8FyWPSUUAxg$$-qCO9GfVAL8OJSSQf-h1I",
+      "component" : "OrderBy",
+      "metadata" : {
+        "label" : "order_by_returnflag_linestatus",
+        "slug" : "order_by_returnflag_linestatus",
+        "x" : 620,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "8GEGaWlbPj5nbaQtvyAq_$$8zZQHfTQd5qpqHasPyKPx##l_returnflag", "8GEGaWlbPj5nbaQtvyAq_$$8zZQHfTQd5qpqHasPyKPx##l_linestatus" ],
+        "orders" : [ {
+          "expression" : {
+            "expression" : "l_returnflag"
+          },
+          "sortType" : "asc"
+        }, {
+          "expression" : {
+            "expression" : "l_linestatus"
+          },
+          "sortType" : "asc"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "8GEGaWlbPj5nbaQtvyAq_$$8zZQHfTQd5qpqHasPyKPx",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "l_returnflag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_linestatus",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sum_qty",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "sum_base_price",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "sum_disc_price",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "sum_charge",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "avg_qty",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "avg_price",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "avg_disc",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "count_order",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            } ]
+          },
+          "slug" : "summarize_shipments"
+        } ],
+        "outputs" : [ {
+          "id" : "7rXx2Mng66n6WsB9vJVfE$$z1vppjcwBrpZ9aaoNl6u4",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "l_returnflag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_linestatus",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sum_qty",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "sum_base_price",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "sum_disc_price",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "sum_charge",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "avg_qty",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "avg_price",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "avg_disc",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "count_order",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "QI1-6iqcvgHU84Xa41oiz$$6lD5H-lWMW1q98qg_IWZ_" : {
+      "id" : "QI1-6iqcvgHU84Xa41oiz$$6lD5H-lWMW1q98qg_IWZ_",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "summarize_shipments",
+        "slug" : "summarize_shipments",
+        "x" : 420,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "aggregate" : [ {
+          "expression" : {
+            "expression" : "any_value(l_returnflag)"
+          },
+          "alias" : "l_returnflag"
+        }, {
+          "expression" : {
+            "expression" : "any_value(l_linestatus)"
+          },
+          "alias" : "l_linestatus"
+        }, {
+          "expression" : {
+            "expression" : "sum(l_quantity)"
+          },
+          "alias" : "sum_qty"
+        }, {
+          "alias" : "sum_base_price",
+          "expression" : {
+            "expression" : "sum(l_extendedprice)"
+          }
+        }, {
+          "alias" : "sum_disc_price",
+          "expression" : {
+            "expression" : "sum(l_extendedprice * (1 - l_discount))"
+          }
+        }, {
+          "alias" : "sum_charge",
+          "expression" : {
+            "expression" : "sum(l_extendedprice * (1 - l_discount))"
+          }
+        }, {
+          "alias" : "avg_qty",
+          "expression" : {
+            "expression" : "avg(l_quantity)"
+          }
+        }, {
+          "alias" : "avg_price",
+          "expression" : {
+            "expression" : "avg(l_extendedprice)"
+          }
+        }, {
+          "alias" : "avg_disc",
+          "expression" : {
+            "expression" : "avg(l_discount)"
+          }
+        }, {
+          "alias" : "count_order",
+          "expression" : {
+            "expression" : "count(*)"
+          }
+        } ],
+        "allowSelection" : true,
+        "condition" : {
+          "expression" : ""
+        },
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "LF6qLw3mBFMYNhzPpsaRr$$Z9pe0rsE3HqsgC7AbAeg-##l_returnflag", "LF6qLw3mBFMYNhzPpsaRr$$Z9pe0rsE3HqsgC7AbAeg-##l_linestatus", "LF6qLw3mBFMYNhzPpsaRr$$Z9pe0rsE3HqsgC7AbAeg-##l_quantity", "LF6qLw3mBFMYNhzPpsaRr$$Z9pe0rsE3HqsgC7AbAeg-##l_extendedprice", "LF6qLw3mBFMYNhzPpsaRr$$Z9pe0rsE3HqsgC7AbAeg-##l_discount" ],
+        "groupBy" : [ {
+          "expression" : {
+            "expression" : "l_returnflag"
+          }
+        }, {
+          "expression" : {
+            "expression" : "l_linestatus"
+          }
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "LF6qLw3mBFMYNhzPpsaRr$$Z9pe0rsE3HqsgC7AbAeg-",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "l_orderkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "l_partkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "l_suppkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "l_linenumber",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "l_quantity",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "l_extendedprice",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "l_discount",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "l_tax",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "l_returnflag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_linestatus",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_shipdate",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "l_commitdate",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "l_receiptdate",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "l_shipinstruct",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_shipmode",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_comment",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "shipdate_before_1998_12_01"
+        } ],
+        "outputs" : [ {
+          "id" : "dHDRQOJBFdgU-wmUaxSrV$$g6CED3Mkull0265eimm-1",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "l_returnflag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_linestatus",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sum_qty",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "sum_base_price",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "sum_disc_price",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "sum_charge",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "avg_qty",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "avg_price",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "avg_disc",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "count_order",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "zMVw59s5w4HbpHeMJr_1P$$0rJvwJqqB0mxSyLbmrgCa",
+    "source" : "D9RXEzp1Po01O49XcJNMI",
+    "sourcePort" : "dQUQvfytpyuE9SpmV__UA",
+    "target" : "o4imDPGcQJ9j_6i8M_0VP$$gWySQTMkgTP4TRHml5zp7",
+    "targetPort" : "O6hnqXF6OOXVddlppqtQF$$ZOWLR9W6xq-Qya_wUAllf"
+  }, {
+    "id" : "C3R8rO-lUhV-5xedH1H7l$$IIOlkCpFrSE9ZS7uMhn8P",
+    "source" : "o4imDPGcQJ9j_6i8M_0VP$$gWySQTMkgTP4TRHml5zp7",
+    "sourcePort" : "utEblcWGLsjHFVgc9hnxA$$1dv_Q5pKx95gW9-5P14Ww",
+    "target" : "QI1-6iqcvgHU84Xa41oiz$$6lD5H-lWMW1q98qg_IWZ_",
+    "targetPort" : "LF6qLw3mBFMYNhzPpsaRr$$Z9pe0rsE3HqsgC7AbAeg-"
+  }, {
+    "id" : "1CPANLhfCzGEbU5UXUo-h$$8PbzspzYoQm-ZSybawVx1",
+    "source" : "QI1-6iqcvgHU84Xa41oiz$$6lD5H-lWMW1q98qg_IWZ_",
+    "sourcePort" : "dHDRQOJBFdgU-wmUaxSrV$$g6CED3Mkull0265eimm-1",
+    "target" : "BpG3Prlk2U8FyWPSUUAxg$$-qCO9GfVAL8OJSSQf-h1I",
+    "targetPort" : "8GEGaWlbPj5nbaQtvyAq_$$8zZQHfTQd5qpqHasPyKPx"
+  }, {
+    "id" : "EJ5mh_uL3kqtX7K7eOvfR$$URcl5LP9rtR_hzleGE_5n",
+    "source" : "BpG3Prlk2U8FyWPSUUAxg$$-qCO9GfVAL8OJSSQf-h1I",
+    "sourcePort" : "7rXx2Mng66n6WsB9vJVfE$$z1vppjcwBrpZ9aaoNl6u4",
+    "target" : "q1_pricing_summary_report##XCTYc9xt",
+    "targetPort" : "UTMTrGtP"
+  } ],
+  "component" : "Model"
+}

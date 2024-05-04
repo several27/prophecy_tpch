@@ -1,0 +1,661 @@
+{
+  "name" : "tpch",
+  "fileSystem" : {
+    "type" : "Folder",
+    "name" : "",
+    "children" : { },
+    "path" : "",
+    "editable" : true
+  },
+  "providerType" : "databricks",
+  "fabricId" : "12058",
+  "prophecyIDEFolder" : {
+    "name" : "",
+    "children" : { },
+    "path" : "",
+    "editable" : true
+  },
+  "externalSources" : {
+    "type" : "Project",
+    "name" : "",
+    "children" : [ {
+      "type" : "Catalog",
+      "name" : "gen_ai",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "hive_metastore",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "main",
+      "children" : [ {
+        "type" : "Schema",
+        "name" : "default",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "information_schema",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "maciej",
+        "tables" : {
+          "alx_total_inf_conditions" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "YearMonth",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Mara_Condition",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Inflected_Indicator_CY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AVG_6_MONTH_BIN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Month",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Avg_TotalRVU_Pred",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Inflected_Indicator_Last_60_Days",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AVG_12_MONTH_BIN_PRED",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Member_Individual_Business_Entity_Key",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Inflection_Index_Pred",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Avg_TotalRVU",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Avg_6_w_2monthRunout",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TotalRVU",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Inflected_Indicator",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "VPP",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Inflection_Index_CY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "V",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Inflected_Indicator_CM",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Inflected_Indicator_Last_90_Days",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TotalInflectionsPerMemberPred",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AVG_3_MONTH_BIN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Age_Bucket",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TotalInflectionsPerMemberCY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Inflected_Indicator_Pred",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "YearMonthDay",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Avg_3_w_2monthRunout",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Avg_TotalRVU_Full",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Processing_Date",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "RunTot_Inflection",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACC",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "YearMonthDay_",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Inflection_Index",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AVG_RVU_BIN",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TotalInflectionsPerMember",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Mara_Common_Chronic_Condition",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "q1_pricing_summary_report" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "l_returnflag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_linestatus",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sum_qty",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "sum_base_price",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "sum_disc_price",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "sum_charge",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "avg_qty",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "avg_price",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "avg_disc",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "count_order",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            } ]
+          }
+        }
+      }, {
+        "type" : "Schema",
+        "name" : "perftest",
+        "children" : [ ]
+      } ]
+    }, {
+      "type" : "Catalog",
+      "name" : "prophecy-demos",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "prophecy_data",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "prophecy_demos",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "samples",
+      "children" : [ {
+        "type" : "Schema",
+        "name" : "default",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "nyctaxi",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "tpch",
+        "tables" : {
+          "lineitem" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "l_orderkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "l_partkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "l_suppkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "l_linenumber",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "l_quantity",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "l_extendedprice",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "l_discount",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "l_tax",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "l_returnflag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_linestatus",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_shipdate",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "l_commitdate",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "l_receiptdate",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "l_shipinstruct",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_shipmode",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_comment",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "nation" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "n_nationkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "n_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "n_regionkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "n_comment",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "supplier" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "s_suppkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "s_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "s_address",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "s_nationkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "s_phone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "s_acctbal",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "s_comment",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "customer" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "c_custkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "c_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "c_address",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "c_nationkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "c_phone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "c_acctbal",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "c_mktsegment",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "c_comment",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "orders" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "o_orderkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "o_custkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "o_orderstatus",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "o_totalprice",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "o_orderdate",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "o_orderpriority",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "o_clerk",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "o_shippriority",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "o_comment",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "region" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "r_regionkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "r_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_comment",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "part" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "p_partkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "p_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "p_mfgr",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "p_brand",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "p_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "p_size",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "p_container",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "p_retailprice",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "p_comment",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "partsupp" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "ps_partkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "ps_suppkey",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "ps_availqty",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "ps_supplycost",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "ps_comment",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          }
+        }
+      } ]
+    }, {
+      "type" : "Catalog",
+      "name" : "system",
+      "children" : [ ]
+    } ]
+  },
+  "dependenciesContainer" : {
+    "dependencies" : { },
+    "prophecyProjectDependencies" : { }
+  },
+  "sourcesToSync" : [ ],
+  "frontEndLanguage" : "sql"
+}

@@ -22,11 +22,406 @@ functions:
   expressions: {}
   airflowFunctions: {}
 subgraphs: {}
-sqlModels: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/q1_pricing_summary_report:
+    name: q1_pricing_summary_report
+    schema:
+      providerType: Databricks
+      fields:
+      - name: l_returnflag
+        dataType:
+          type: String
+      - name: l_linestatus
+        dataType:
+          type: String
+      - name: sum_qty
+        dataType:
+          type: Decimal
+      - name: sum_base_price
+        dataType:
+          type: Decimal
+      - name: sum_disc_price
+        dataType:
+          type: Decimal
+      - name: sum_charge
+        dataType:
+          type: Decimal
+      - name: avg_qty
+        dataType:
+          type: Decimal
+      - name: avg_price
+        dataType:
+          type: Decimal
+      - name: avg_disc
+        dataType:
+          type: Decimal
+      - name: count_order
+        dataType:
+          type: Bigint
+    description: null
+    author: maciej+demo7@prophecy.io
+    files:
+    - models/q1_pricing_summary_report.sql
+    - .prophecy/ide/models/q1_pricing_summary_report.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-05-03 21:27:39'
+  .prophecy/metadata/sqlmodels/q2_minimum_cost_supplier:
+    name: q2_minimum_cost_supplier
+    schema:
+      providerType: Databricks
+      fields:
+      - name: p_partkey
+        dataType:
+          type: Bigint
+      - name: p_name
+        dataType:
+          type: String
+      - name: p_mfgr
+        dataType:
+          type: String
+      - name: p_brand
+        dataType:
+          type: String
+      - name: p_type
+        dataType:
+          type: String
+      - name: p_size
+        dataType:
+          type: Integer
+      - name: p_container
+        dataType:
+          type: String
+      - name: p_retailprice
+        dataType:
+          type: Decimal
+      - name: p_comment
+        dataType:
+          type: String
+      - name: ps_partkey
+        dataType:
+          type: Bigint
+      - name: ps_suppkey
+        dataType:
+          type: Bigint
+      - name: ps_availqty
+        dataType:
+          type: Integer
+      - name: ps_supplycost
+        dataType:
+          type: Decimal
+      - name: ps_comment
+        dataType:
+          type: String
+      - name: s_suppkey
+        dataType:
+          type: Bigint
+      - name: s_name
+        dataType:
+          type: String
+      - name: s_address
+        dataType:
+          type: String
+      - name: s_nationkey
+        dataType:
+          type: Bigint
+      - name: s_phone
+        dataType:
+          type: String
+      - name: s_acctbal
+        dataType:
+          type: Decimal
+      - name: s_comment
+        dataType:
+          type: String
+      - name: n_nationkey
+        dataType:
+          type: Bigint
+      - name: n_name
+        dataType:
+          type: String
+      - name: n_regionkey
+        dataType:
+          type: Bigint
+      - name: n_comment
+        dataType:
+          type: String
+      - name: r_regionkey
+        dataType:
+          type: Bigint
+      - name: r_name
+        dataType:
+          type: String
+      - name: r_comment
+        dataType:
+          type: String
+    description: null
+    author: maciej+demo7@prophecy.io
+    files:
+    - models/q2_minimum_cost_supplier.sql
+    - .prophecy/ide/models/q2_minimum_cost_supplier.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-05-03 21:57:48'
 sqlSnapshots: {}
 sqlMacros: {}
 sqlSeeds: {}
-sqlSources: {}
+sqlSources:
+  .prophecy/metadata/sqlsources/samples_tpch:
+    name: samples.tpch
+    description: null
+    author: maciej+demo7@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2024-05-03 21:28:39'
+    tables:
+    - name: customer
+      schema:
+        providerType: databricks
+        fields:
+        - name: c_custkey
+          dataType:
+            type: Bigint
+        - name: c_name
+          dataType:
+            type: String
+        - name: c_address
+          dataType:
+            type: String
+        - name: c_nationkey
+          dataType:
+            type: Bigint
+        - name: c_phone
+          dataType:
+            type: String
+        - name: c_acctbal
+          dataType:
+            type: Decimal
+        - name: c_mktsegment
+          dataType:
+            type: String
+        - name: c_comment
+          dataType:
+            type: String
+      description: null
+      author: maciej+demo7@prophecy.io
+      createdAt: '2024-05-03 21:28:39'
+    - name: lineitem
+      schema:
+        providerType: databricks
+        fields:
+        - name: l_orderkey
+          dataType:
+            type: Bigint
+        - name: l_partkey
+          dataType:
+            type: Bigint
+        - name: l_suppkey
+          dataType:
+            type: Bigint
+        - name: l_linenumber
+          dataType:
+            type: Integer
+        - name: l_quantity
+          dataType:
+            type: Decimal
+        - name: l_extendedprice
+          dataType:
+            type: Decimal
+        - name: l_discount
+          dataType:
+            type: Decimal
+        - name: l_tax
+          dataType:
+            type: Decimal
+        - name: l_returnflag
+          dataType:
+            type: String
+        - name: l_linestatus
+          dataType:
+            type: String
+        - name: l_shipdate
+          dataType:
+            type: Date
+        - name: l_commitdate
+          dataType:
+            type: Date
+        - name: l_receiptdate
+          dataType:
+            type: Date
+        - name: l_shipinstruct
+          dataType:
+            type: String
+        - name: l_shipmode
+          dataType:
+            type: String
+        - name: l_comment
+          dataType:
+            type: String
+      description: null
+      author: maciej+demo7@prophecy.io
+      createdAt: '2024-05-03 21:28:39'
+    - name: nation
+      schema:
+        providerType: databricks
+        fields:
+        - name: n_nationkey
+          dataType:
+            type: Bigint
+        - name: n_name
+          dataType:
+            type: String
+        - name: n_regionkey
+          dataType:
+            type: Bigint
+        - name: n_comment
+          dataType:
+            type: String
+      description: null
+      author: maciej+demo7@prophecy.io
+      createdAt: '2024-05-03 21:28:39'
+    - name: orders
+      schema:
+        providerType: databricks
+        fields:
+        - name: o_orderkey
+          dataType:
+            type: Bigint
+        - name: o_custkey
+          dataType:
+            type: Bigint
+        - name: o_orderstatus
+          dataType:
+            type: String
+        - name: o_totalprice
+          dataType:
+            type: Decimal
+        - name: o_orderdate
+          dataType:
+            type: Date
+        - name: o_orderpriority
+          dataType:
+            type: String
+        - name: o_clerk
+          dataType:
+            type: String
+        - name: o_shippriority
+          dataType:
+            type: Integer
+        - name: o_comment
+          dataType:
+            type: String
+      description: null
+      author: maciej+demo7@prophecy.io
+      createdAt: '2024-05-03 21:28:40'
+    - name: part
+      schema:
+        providerType: databricks
+        fields:
+        - name: p_partkey
+          dataType:
+            type: Bigint
+        - name: p_name
+          dataType:
+            type: String
+        - name: p_mfgr
+          dataType:
+            type: String
+        - name: p_brand
+          dataType:
+            type: String
+        - name: p_type
+          dataType:
+            type: String
+        - name: p_size
+          dataType:
+            type: Integer
+        - name: p_container
+          dataType:
+            type: String
+        - name: p_retailprice
+          dataType:
+            type: Decimal
+        - name: p_comment
+          dataType:
+            type: String
+      description: null
+      author: maciej+demo7@prophecy.io
+      createdAt: '2024-05-03 21:28:40'
+    - name: partsupp
+      schema:
+        providerType: databricks
+        fields:
+        - name: ps_partkey
+          dataType:
+            type: Bigint
+        - name: ps_suppkey
+          dataType:
+            type: Bigint
+        - name: ps_availqty
+          dataType:
+            type: Integer
+        - name: ps_supplycost
+          dataType:
+            type: Decimal
+        - name: ps_comment
+          dataType:
+            type: String
+      description: null
+      author: maciej+demo7@prophecy.io
+      createdAt: '2024-05-03 21:28:41'
+    - name: region
+      schema:
+        providerType: databricks
+        fields:
+        - name: r_regionkey
+          dataType:
+            type: Bigint
+        - name: r_name
+          dataType:
+            type: String
+        - name: r_comment
+          dataType:
+            type: String
+      description: null
+      author: maciej+demo7@prophecy.io
+      createdAt: '2024-05-03 21:28:41'
+    - name: supplier
+      schema:
+        providerType: databricks
+        fields:
+        - name: s_suppkey
+          dataType:
+            type: Bigint
+        - name: s_name
+          dataType:
+            type: String
+        - name: s_address
+          dataType:
+            type: String
+        - name: s_nationkey
+          dataType:
+            type: Bigint
+        - name: s_phone
+          dataType:
+            type: String
+        - name: s_acctbal
+          dataType:
+            type: Decimal
+        - name: s_comment
+          dataType:
+            type: String
+      description: null
+      author: maciej+demo7@prophecy.io
+      createdAt: '2024-05-03 21:28:42'
 sqlUnreferencedSources: {}
 sqlPipeline:
   name: sqlPipeline
